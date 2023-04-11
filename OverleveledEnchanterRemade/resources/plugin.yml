@@ -1,0 +1,11 @@
+api-version: 1.13
+name: OverleveledEnchanter
+version: 2.8
+main: me.jingo.ove.OverleveledEnchanter
+author: [_1jingo1_]
+description: Get control of the enchantments in your server!
+commands:
+  ove:
+    description: Overleveled Enchanter commands.
+    usage: /<command>
+    aliases: [overleveledenchanter]

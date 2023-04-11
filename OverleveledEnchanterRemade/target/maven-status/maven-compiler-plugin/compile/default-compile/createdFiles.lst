@@ -1,0 +1,9 @@
+me\jingo\ove\Anvil.class
+me\jingo\ovecmd\OveTabCompleter.class
+me\jingo\ove\StoredInventory.class
+me\jingo\ove\OverleveledEnchanter.class
+me\jingo\enchantment\LoreCorrector.class
+me\jingo\enchantment\EnchantmentCorrector.class
+me\jingo\ove\EnchantingTable.class
+me\jingo\ovecmd\OveCmd.class
+me\jingo\enchantment\EnchantmentLevelCorrector.class

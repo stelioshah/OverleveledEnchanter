@@ -1,0 +1,219 @@
+#OverleveledEnchanter config file
+
+#If this is set to false, then basically the combining level for any enchantment will be the vanilla level, unless the specified combining level for an enchantment...
+#...has a LOWER value than the default vanilla level (-1 doesn't count as being lower).
+#If this is set to false example: If a player combines 2 unbreaking III books they will receive an unbreaking III book
+#If this is set to true example: If a player combines 2 unbreaking III books they will receive an unbreaking IV book
+Uncapped-Merge-Combination: true
+
+#This is the most amount of exp levels an anvil "transaction" can cost.
+#The maximum valid value for this is 2147483647, DO NOT put a larger number than the maximum valid one!
+#The minimum valid value for this is 1!
+Max-Level-Cost: 100
+
+#If this is enabled, whenever an anvil combination is too expensive (cost > 39) the cost will be set to the max-level-cost.
+Too-Expensive-Always-Max-Level-Cost: false
+
+#If this is enabled, it will also fix the enchanting table levels. To update this modification you need to reload the plugin (by restarting the server for example).
+Enchanting-Table-Level-Fixer: true
+
+#This enables the max level boosting of players based on permissions
+Rank-Level-Booster: false
+
+#These further customize the max and combining levels of a PLAYER. If the player has the permission overleveledenchanter.booster.tier1, then the tier1 values...
+#...will be added on top of his max and combining level. You can rename these and add as many of these as you like. 
+#The name is the corresponding permission: overleveledenchanter.booster.<name>
+#You should not give more than one tier permission to a player at the same time! Only one of them will be used in the end.
+
+#Example: max level for unbreaking is set to 4 and combining level to -1. A player with the tier1 booster will be able to get up to unbreaking 5 (max level + 1)
+#If the combining level was set to 3, then the player would be able to get through combining up to a level 4 unbreaking (combining level + 1).
+#At the same they would be eligible to use up to unbreaking 5 in the anvil (in case they had an unbreaking 5 book for example they would be able to use it).
+#They wouldn't be able to use an unbreaking 6 book though, it would yield unbreaking 5!
+Level-Booster:
+  tier1:
+    maxLevel: 1
+    combining-level: 1
+    
+  tier2:
+    maxLevel: 2
+    combining-level: 2
+    
+  tier3:
+    maxLevel: 3
+    combining-level: 3
+
+#The admin level booster bypasses the tier level booster. This is added because typically admins have the .*, which would mess things up.
+Admin-Level-Booster:
+    maxLevel: 0
+    combining-level: 0
+
+#This list sets the maximum enchantment level an item can receive while in anvil or enchanting table.
+#-1 means no max level value.
+#The combining level parameter specifies the maximum level an enchantment can reach through combinations.
+#For example, normally you can combine 2 unbreaking 2 pickaxes and receive an unbreaking 3 one, but cannot combine 2 unbreaking 3 to receive an unbreaking 4.
+#If the combining level for unbreaking is set to -1 or to a value >= 4, then you will receive an unbreaking 4 enchantment IF THE UNCAPPED MERGE COMBINATION SETTING IS SET TO TRUE!
+#The uncapped merge combination specifies if an enchantments level can surpass minecraft's default level through combining same level enchants in the anvil.
+
+#IF UNCAPPED MERGE COMBINATION IS SET TO FALSE, the maximum level for a same-level enchantment combination will be minecraft's default max level. UNLESS the combining-level for that specific enchantment...
+#...is set to a value lower than the default minecraft value! For example, if the uncapped-merge-combination is set to false, but the combining level of unbreaking is set to 2.
+#Now you can only combine 2 unbreaking 1 pickaxes to get an unbreaking 2 pickaxe, you will not be able to get an unbreaking 3 pickaxe through combining! At the same time, for example...
+#...if the combining level of power is set to -1 or to any value higher than 5 (default max level) then you will still not be able to combine power books to get level greater than 5!
+#If this setting is set to true, for it to work, the player NEEDS to have the overleveledenchanter.uncappedanvil permission!!!! Otherwise the plugin will act as if the setting is set to false.
+#For that specific player!
+
+#The max level parameter has the final say to the maximum level of the enchantment no matter what.
+Enchantments:
+  power:
+    maxLevel: -1
+    combining-level: -1
+
+  flame:
+    maxLevel: -1
+    combining-level: -1  
+
+  infinity:
+    maxLevel: 1
+    combining-level: 1
+
+  punch:
+    maxLevel: -1
+    combining-level: -1
+
+  binding_curse:
+    maxLevel: 1
+    combining-level: 1
+
+  channeling:
+    maxLevel: -1
+    combining-level: -1
+
+  sharpness:
+    maxLevel: -1
+    combining-level: -1
+
+  bane_of_arthropods:
+    maxLevel: -1
+    combining-level: -1
+
+  smite:
+    maxLevel: -1
+    combining-level: -1
+
+  depth_strider:
+    maxLevel: -1
+
+  efficiency:
+    maxLevel: -1
+    combining-level: -1
+
+  unbreaking:
+    maxLevel: -1
+    combining-level: -1
+
+  fire_aspect:
+    maxLevel: -1
+    combining-level: -1
+
+  frost_walker:
+    maxLevel: -1
+    combining-level: -1
+
+  impaling:
+    maxLevel: -1
+    combining-level: -1
+
+  knockback:
+    maxLevel: -1
+    combining-level: -1
+
+  fortune:
+    maxLevel: -1
+    combining-level: -1
+
+  looting:
+    maxLevel: -1
+    combining-level: -1
+
+  loyalty:
+    maxLevel: -1
+    combining-level: -1
+
+  luck_of_the_sea:
+    maxLevel: -1
+    combining-level: -1
+
+  lure:
+    maxLevel: -1
+    combining-level: -1
+
+  mending:
+    maxLevel: -1
+    combining-level: -1
+
+  multishot:
+    maxLevel: -1
+    combining-level: -1
+
+  respiration:
+    maxLevel: -1
+    combining-level: -1
+
+  piercing:
+    maxLevel: -1
+    combining-level: -1
+
+  protection:
+    maxLevel: -1
+    combining-level: -1
+
+  blast_protection:
+    maxLevel: -1
+    combining-level: -1
+
+  feather_falling:
+    maxLevel: -1
+    combining-level: -1
+
+  fire_protection:
+    maxLevel: -1
+    combining-level: -1
+
+  projectile_protection:
+    maxLevel: -1
+    combining-level: -1
+
+  quick_charge:
+    maxLevel: -1
+    combining-level: -1
+
+  riptide:
+    maxLevel: -1
+    combining-level: -1
+
+  silk_touch:
+    maxLevel: 1
+    combining-level: 1
+
+  soul_speed:
+    maxLevel: -1
+    combining-level: -1
+    
+  sweeping:
+    maxLevel: -1
+    combining-level: -1
+
+  thorns:
+    maxLevel: -1
+    combining-level: -1
+
+  vanishing_curse:
+    maxLevel: 1
+    combining-level: 1
+    
+  aqua_affinity:
+    maxLevel: -1
+    combining-level: -1
+    
+  swift_sneak:
+    maxLevel: -1
+    combining-level: -1
