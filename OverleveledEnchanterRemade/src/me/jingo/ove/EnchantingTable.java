@@ -43,6 +43,8 @@ public class EnchantingTable implements Listener{
 		
 		for(EnchantmentOffer theOffer : theTable.getOffers()) {
 			
+			if(theOffer == null) continue;
+			
 				int maxLevel = pluginInstance.getMaxLevel(theOffer.getEnchantment());
 				
 				if(pluginInstance.isLevelInvalid(maxLevel)) {

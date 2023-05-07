@@ -58,7 +58,6 @@ public class Anvil implements Listener{
 		else
 			updateTheAnvil(e, false);
 		
-		
 		saveTheInventory(thePlayer, e);
 	}
 	
