@@ -56,7 +56,7 @@ public class StoredInventory {
 	
 	public void updateInventory(PrepareAnvilEvent e) {
 		
-		//the result is the first slot seen as "null", when removing (clicking) something from the inventory. the clicked slot goes next.
+		//the result is first seen as "null" and then the contents are when removing a content from the inventory
 		if(e.getResult() == null || Material.AIR.equals(e.getResult().getType())) return;
 		
 		if(hasChangedName(e.getResult()))
